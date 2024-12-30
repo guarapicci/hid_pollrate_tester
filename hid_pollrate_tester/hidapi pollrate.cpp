@@ -118,7 +118,7 @@ int main(int argc, char* argv[])
 				return -1;
 			}
 			else
-				cout << interval.count() << "ms\n";
+				cout << "" << interval.count() << "ms\n";
 		}
 	}
 	// Close the device
