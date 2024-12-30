@@ -1,7 +1,7 @@
 # hid_pollrate_tester
 This console application for Windows and Linux tests how fast your input device is really responding to the computer.
 
-###how to use
+### how to use
 Make sure beforehand that you do have hidapi and your Operating System's corresponding C++ runtime (usually Visual C++ Redistributable or GNU C++).
 
 - Compile:
