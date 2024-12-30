@@ -94,7 +94,7 @@ int main(int argc, char* argv[])
 		cout << "\treal readout " << i << ": " << total_sleep_time.count() << "ms\n";
 	}
 
-	cout << "a device has been detected. this program will now poll for 5000 input samples and dump their read time as microseconds.\n";
+	cout << "a device has been detected. this program will now poll for 5000 input samples and dump their read time as milliseconds.\n";
 
 	chrono::high_resolution_clock the_timer;
 	for (int i = 0;i < 5000;i++) {
