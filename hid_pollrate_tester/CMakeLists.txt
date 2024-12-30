@@ -19,7 +19,11 @@ if(WIN32)
 	target_link_directories(pollrate_cli PRIVATE "dll/")
 	target_link_libraries(pollrate_cli "${CMAKE_SOURCE_DIR}/hid_pollrate_tester/dll/hidapi.lib" )
 	set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /SUBSYSTEM:CONSOLE /ENTRY:mainCRTStartup")
+
+	# a very hacky way to just shove the required dll wherever the program might search for it.
 	file(COPY "dll/hidapi.dll" DESTINATION "./")
+	file(COPY "dll/hidapi.dll" DESTINATION "./Debug")
+	install(FILES "dll/hidapi.dll" TYPE BIN)
 endif()
 if(${CMAKE_HOST_SYSTEM_NAME} STREQUAL "Linux")
 	target_link_directories(pollrate_cli PRIVATE "/usr/lib" "/us0r/local/lib" "/usr/share/lib" "/lib" "/usr/lib/x86_64-linux-gnu" "/usr/lib/x86_64-linux-gnu")
