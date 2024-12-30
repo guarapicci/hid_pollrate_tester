@@ -101,7 +101,7 @@ int main(int argc, char* argv[])
 		chrono::time_point<chrono::high_resolution_clock> before_read = the_timer.now();
 		int bytes_read = hid_read(handle, buf, 60);
 		chrono::time_point<chrono::high_resolution_clock> after_read = the_timer.now();
-		chrono::duration<double, micro> interval = (after_read - before_read);
+		chrono::duration<double, milli> interval = (after_read - before_read);
 		// double chewed_up_frequency = 1 / (interval.count() / 1000);
 		// if (chewed_up_frequency < 60) {
 		// 	cout << "low poll rate! (" << chewed_up_frequency << "hz)" << std::endl;
