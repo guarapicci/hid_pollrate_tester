@@ -1,0 +1,5 @@
+This file has a list of common VID:PID combinations for devices.
+Each row has an entry in the format:
+	{{ <device name>: <VID> <PID> }}.
+
+Sony Dualshock 4 gen 2 (the one with lightbar on touchpad): 054c 09cc
