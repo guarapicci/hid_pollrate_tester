@@ -11,7 +11,7 @@ cmake --fresh -S . -B out && cmake --build out
 
 - Run:
 ```sh
-./out/hid_pollrate_tester <VID> <PID>
+./out/hid_pollrate_tester/pollrate_cli <VID> <PID>
 ```
 Replacing `<VID>` with your device's Vendor ID and `<PID>` with your device's Product ID.
 
